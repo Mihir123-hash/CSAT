@@ -1,0 +1,11 @@
+Flask
+Flask-Mail
+Flask-SQLAlchemy
+Flask-Session
+DateTime
+mysql-connector-python
+openai
+Py-OS
+python-dotenv
+random2
+string-py

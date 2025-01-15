@@ -1,0 +1,285 @@
+2024-09-24 08:57:07,445 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.104.85:5000
+2024-09-24 08:57:07,445 - INFO - [33mPress CTRL+C to quit[0m
+2024-09-24 08:57:39,241 - INFO - 127.0.0.1 - - [24/Sep/2024 08:57:39] "[32mGET / HTTP/1.1[0m" 302 -
+2024-09-24 08:57:39,340 - INFO - 127.0.0.1 - - [24/Sep/2024 08:57:39] "GET /cxm/ HTTP/1.1" 200 -
+2024-09-24 08:57:39,533 - INFO - 127.0.0.1 - - [24/Sep/2024 08:57:39] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2024-09-24 08:57:39,558 - INFO - 127.0.0.1 - - [24/Sep/2024 08:57:39] "[36mGET /static/images/Auxilo-logo.svg HTTP/1.1[0m" 304 -
+2024-09-24 08:57:39,561 - INFO - 127.0.0.1 - - [24/Sep/2024 08:57:39] "[36mGET /static/images/login-bg.jpg HTTP/1.1[0m" 304 -
+2024-09-24 08:57:39,759 - INFO - 127.0.0.1 - - [24/Sep/2024 08:57:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-09-24 08:57:45,728 - INFO - 127.0.0.1 - - [24/Sep/2024 08:57:45] "POST /send-otp HTTP/1.1" 200 -
+2024-09-24 08:58:00,064 - INFO - 127.0.0.1 - - [24/Sep/2024 08:58:00] "POST /verify-otp HTTP/1.1" 200 -
+2024-09-24 08:58:00,089 - INFO - User Mihir Tendulkar (ID: None) accessed the source name page.
+2024-09-24 08:58:00,163 - INFO - 127.0.0.1 - - [24/Sep/2024 08:58:00] "GET /cxm/source_name HTTP/1.1" 200 -
+2024-09-24 08:58:00,215 - INFO - 127.0.0.1 - - [24/Sep/2024 08:58:00] "[36mGET /static/images/cp.png HTTP/1.1[0m" 304 -
+2024-09-24 08:58:00,238 - INFO - 127.0.0.1 - - [24/Sep/2024 08:58:00] "[36mGET /static/images/website.jpg HTTP/1.1[0m" 304 -
+2024-09-24 08:58:27,011 - INFO - User Mihir Tendulkar (ID: None) accessed the customer portal.
+2024-09-24 08:58:27,091 - INFO - 127.0.0.1 - - [24/Sep/2024 08:58:27] "GET /cxm/customer_portal HTTP/1.1" 200 -
+2024-09-24 08:58:27,127 - INFO - 127.0.0.1 - - [24/Sep/2024 08:58:27] "[36mGET /static/images/csat_new.jpg HTTP/1.1[0m" 304 -
+2024-09-24 08:58:27,132 - INFO - 127.0.0.1 - - [24/Sep/2024 08:58:27] "[36mGET /static/images/nps_new.jpg HTTP/1.1[0m" 304 -
+2024-09-24 08:58:39,675 - INFO - User Mihir Tendulkar (ID: None) accessed the CSAT page.
+2024-09-24 08:58:39,738 - INFO - 127.0.0.1 - - [24/Sep/2024 08:58:39] "GET /cxm/csat HTTP/1.1" 200 -
+2024-09-24 08:58:39,991 - INFO - 127.0.0.1 - - [24/Sep/2024 08:58:39] "GET /api/survey/overall_csat?question_id=1 HTTP/1.1" 200 -
+2024-09-24 08:58:44,702 - INFO - 127.0.0.1 - - [24/Sep/2024 08:58:44] "GET /api/survey/csatbranch HTTP/1.1" 200 -
+2024-09-24 08:58:45,370 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 08:58:45,909 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 08:58:46,530 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 08:58:47,106 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 08:58:47,707 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 08:58:48,338 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 08:58:48,945 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 08:58:49,590 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 08:58:50,107 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 08:58:50,710 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 08:58:51,330 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 08:58:51,921 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 08:58:52,456 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 08:58:53,073 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 08:58:53,601 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 08:58:54,152 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 08:58:54,672 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 08:58:55,240 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 08:58:55,819 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-24 08:58:55,820 - INFO - 127.0.0.1 - - [24/Sep/2024 08:58:55] "GET /api/survey/csat/classifications HTTP/1.1" 200 -
+2024-09-24 08:59:04,716 - INFO - User 'Mihir Tendulkar' (ID: None) logged out. Session started at None and ended at 2024-09-24 08:59:04.716389.
+2024-09-24 08:59:04,878 - INFO - 127.0.0.1 - - [24/Sep/2024 08:59:04] "[32mGET /cxm/logout HTTP/1.1[0m" 302 -
+2024-09-24 08:59:04,889 - INFO - 127.0.0.1 - - [24/Sep/2024 08:59:04] "GET /cxm/ HTTP/1.1" 200 -
+2024-09-24 08:59:04,926 - INFO - 127.0.0.1 - - [24/Sep/2024 08:59:04] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2024-09-24 08:59:04,929 - INFO - 127.0.0.1 - - [24/Sep/2024 08:59:04] "[36mGET /static/images/login-bg.jpg HTTP/1.1[0m" 304 -
+2024-09-24 08:59:04,935 - INFO - 127.0.0.1 - - [24/Sep/2024 08:59:04] "[36mGET /static/images/Auxilo-logo.svg HTTP/1.1[0m" 304 -
+2024-10-21 15:50:44,349 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.104.47:5000
+2024-10-21 15:50:44,349 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-21 15:50:52,420 - INFO - 127.0.0.1 - - [21/Oct/2024 15:50:52] "[32mGET / HTTP/1.1[0m" 302 -
+2024-10-21 15:50:52,511 - INFO - 127.0.0.1 - - [21/Oct/2024 15:50:52] "GET /cxm/ HTTP/1.1" 200 -
+2024-10-21 15:50:52,681 - INFO - 127.0.0.1 - - [21/Oct/2024 15:50:52] "GET /static/css/login.css HTTP/1.1" 200 -
+2024-10-21 15:50:52,686 - INFO - 127.0.0.1 - - [21/Oct/2024 15:50:52] "GET /static/images/login-bg.jpg HTTP/1.1" 200 -
+2024-10-21 15:50:52,686 - INFO - 127.0.0.1 - - [21/Oct/2024 15:50:52] "GET /static/images/Auxilo-logo.svg HTTP/1.1" 200 -
+2024-10-21 15:50:53,954 - INFO - 127.0.0.1 - - [21/Oct/2024 15:50:53] "GET /cxm/ HTTP/1.1" 200 -
+2024-10-21 15:50:54,020 - INFO - 127.0.0.1 - - [21/Oct/2024 15:50:54] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2024-10-21 15:50:54,021 - INFO - 127.0.0.1 - - [21/Oct/2024 15:50:54] "[36mGET /static/images/login-bg.jpg HTTP/1.1[0m" 304 -
+2024-10-21 15:50:54,024 - INFO - 127.0.0.1 - - [21/Oct/2024 15:50:54] "[36mGET /static/images/Auxilo-logo.svg HTTP/1.1[0m" 304 -
+2024-10-21 15:50:54,328 - INFO - 127.0.0.1 - - [21/Oct/2024 15:50:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-10-21 15:51:00,202 - INFO - 127.0.0.1 - - [21/Oct/2024 15:51:00] "POST /send-otp HTTP/1.1" 200 -
+2024-10-21 15:51:17,145 - INFO - 127.0.0.1 - - [21/Oct/2024 15:51:17] "POST /verify-otp HTTP/1.1" 200 -
+2024-10-21 15:51:17,182 - INFO - User Mihir Tendulkar (ID: None) accessed the source name page.
+2024-10-21 15:51:17,274 - INFO - 127.0.0.1 - - [21/Oct/2024 15:51:17] "GET /cxm/source_name HTTP/1.1" 200 -
+2024-10-21 15:51:17,327 - INFO - 127.0.0.1 - - [21/Oct/2024 15:51:17] "GET /static/images/cp.png HTTP/1.1" 200 -
+2024-10-21 15:51:17,338 - INFO - 127.0.0.1 - - [21/Oct/2024 15:51:17] "GET /static/images/website.jpg HTTP/1.1" 200 -
+2024-10-21 15:51:17,340 - INFO - 127.0.0.1 - - [21/Oct/2024 15:51:17] "GET /static/images/login.jpg HTTP/1.1" 200 -
+2024-10-23 13:30:45,898 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.104.47:5000
+2024-10-23 13:30:45,899 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-23 13:30:53,947 - INFO - 127.0.0.1 - - [23/Oct/2024 13:30:53] "[32mGET / HTTP/1.1[0m" 302 -
+2024-10-23 13:30:54,241 - INFO - 127.0.0.1 - - [23/Oct/2024 13:30:54] "GET /cxm/ HTTP/1.1" 200 -
+2024-10-23 13:30:54,427 - INFO - 127.0.0.1 - - [23/Oct/2024 13:30:54] "GET /static/css/login.css HTTP/1.1" 200 -
+2024-10-23 13:30:54,459 - INFO - 127.0.0.1 - - [23/Oct/2024 13:30:54] "GET /static/images/login-bg.jpg HTTP/1.1" 200 -
+2024-10-23 13:30:54,462 - INFO - 127.0.0.1 - - [23/Oct/2024 13:30:54] "GET /static/images/Auxilo-logo.svg HTTP/1.1" 200 -
+2024-10-23 13:31:04,759 - INFO - 127.0.0.1 - - [23/Oct/2024 13:31:04] "POST /send-otp HTTP/1.1" 200 -
+2024-10-23 13:31:23,553 - INFO - 127.0.0.1 - - [23/Oct/2024 13:31:23] "POST /verify-otp HTTP/1.1" 200 -
+2024-10-23 13:31:23,577 - INFO - User Mihir Tendulkar (ID: None) accessed the source name page.
+2024-10-23 13:31:23,664 - INFO - 127.0.0.1 - - [23/Oct/2024 13:31:23] "GET /cxm/source_name HTTP/1.1" 200 -
+2024-10-23 13:31:23,709 - INFO - 127.0.0.1 - - [23/Oct/2024 13:31:23] "GET /static/images/cp.png HTTP/1.1" 200 -
+2024-10-23 13:31:23,710 - INFO - 127.0.0.1 - - [23/Oct/2024 13:31:23] "GET /static/images/login.jpg HTTP/1.1" 200 -
+2024-10-23 13:31:23,711 - INFO - 127.0.0.1 - - [23/Oct/2024 13:31:23] "GET /static/images/website.jpg HTTP/1.1" 200 -
+2024-10-23 13:32:01,525 - INFO - User Mihir Tendulkar (ID: None) accessed the website page.
+2024-10-23 13:32:01,627 - INFO - 127.0.0.1 - - [23/Oct/2024 13:32:01] "GET /cxm/website HTTP/1.1" 200 -
+2024-10-23 13:32:01,677 - INFO - 127.0.0.1 - - [23/Oct/2024 13:32:01] "GET /static/images/csat_new.jpg HTTP/1.1" 200 -
+2024-10-23 13:32:01,678 - INFO - 127.0.0.1 - - [23/Oct/2024 13:32:01] "GET /static/images/ces_new.jpg HTTP/1.1" 200 -
+2024-10-23 14:20:49,613 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.104.47:5000
+2024-10-23 14:20:49,613 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-23 14:20:53,968 - INFO - 127.0.0.1 - - [23/Oct/2024 14:20:53] "[32mGET / HTTP/1.1[0m" 302 -
+2024-10-23 14:20:54,304 - INFO - 127.0.0.1 - - [23/Oct/2024 14:20:54] "GET /cxm/ HTTP/1.1" 200 -
+2024-10-23 14:20:54,461 - INFO - 127.0.0.1 - - [23/Oct/2024 14:20:54] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2024-10-23 14:20:54,484 - INFO - 127.0.0.1 - - [23/Oct/2024 14:20:54] "[36mGET /static/images/Auxilo-logo.svg HTTP/1.1[0m" 304 -
+2024-10-23 14:20:54,485 - INFO - 127.0.0.1 - - [23/Oct/2024 14:20:54] "[36mGET /static/images/login-bg.jpg HTTP/1.1[0m" 304 -
+2024-10-23 14:20:55,465 - INFO - 127.0.0.1 - - [23/Oct/2024 14:20:55] "[32mGET /cxm/customer_portal HTTP/1.1[0m" 302 -
+2024-10-23 14:20:55,480 - INFO - 127.0.0.1 - - [23/Oct/2024 14:20:55] "GET /cxm/ HTTP/1.1" 200 -
+2024-10-23 14:20:55,550 - INFO - 127.0.0.1 - - [23/Oct/2024 14:20:55] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2024-10-23 14:20:55,551 - INFO - 127.0.0.1 - - [23/Oct/2024 14:20:55] "[36mGET /static/images/login-bg.jpg HTTP/1.1[0m" 304 -
+2024-10-23 14:20:55,552 - INFO - 127.0.0.1 - - [23/Oct/2024 14:20:55] "[36mGET /static/images/Auxilo-logo.svg HTTP/1.1[0m" 304 -
+2024-10-23 14:21:02,984 - INFO - 127.0.0.1 - - [23/Oct/2024 14:21:02] "POST /send-otp HTTP/1.1" 200 -
+2024-10-23 14:21:25,488 - INFO - 127.0.0.1 - - [23/Oct/2024 14:21:25] "[31m[1mPOST /verify-otp HTTP/1.1[0m" 400 -
+2024-10-23 14:21:42,750 - INFO - 127.0.0.1 - - [23/Oct/2024 14:21:42] "POST /verify-otp HTTP/1.1" 200 -
+2024-10-23 14:21:42,784 - INFO - User Mihir Tendulkar (ID: None) accessed the source name page.
+2024-10-23 14:21:42,862 - INFO - 127.0.0.1 - - [23/Oct/2024 14:21:42] "GET /cxm/source_name HTTP/1.1" 200 -
+2024-10-23 14:21:42,906 - INFO - 127.0.0.1 - - [23/Oct/2024 14:21:42] "GET /static/images/cp.png HTTP/1.1" 200 -
+2024-10-23 14:21:42,933 - INFO - 127.0.0.1 - - [23/Oct/2024 14:21:42] "GET /static/images/login.jpg HTTP/1.1" 200 -
+2024-10-23 14:21:42,933 - INFO - 127.0.0.1 - - [23/Oct/2024 14:21:42] "GET /static/images/website.jpg HTTP/1.1" 200 -
+2024-10-23 14:21:46,137 - INFO - 127.0.0.1 - - [23/Oct/2024 14:21:46] "[33mGET /cxm/lns HTTP/1.1[0m" 404 -
+2024-10-23 14:24:21,414 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.104.47:5000
+2024-10-23 14:24:21,415 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-23 14:24:25,352 - INFO - 127.0.0.1 - - [23/Oct/2024 14:24:25] "[33mGET /cxm/lns HTTP/1.1[0m" 404 -
+2024-10-23 14:24:27,434 - INFO - 127.0.0.1 - - [23/Oct/2024 14:24:27] "[33mGET /cxm/lns HTTP/1.1[0m" 404 -
+2024-10-23 14:24:28,237 - INFO - 127.0.0.1 - - [23/Oct/2024 14:24:28] "[33mGET /cxm/lns HTTP/1.1[0m" 404 -
+2024-10-23 14:24:33,033 - INFO - 127.0.0.1 - - [23/Oct/2024 14:24:33] "[32mGET /cxm HTTP/1.1[0m" 308 -
+2024-10-23 14:24:33,050 - INFO - 127.0.0.1 - - [23/Oct/2024 14:24:33] "GET /cxm/ HTTP/1.1" 200 -
+2024-10-23 14:24:33,198 - INFO - 127.0.0.1 - - [23/Oct/2024 14:24:33] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2024-10-23 14:24:33,204 - INFO - 127.0.0.1 - - [23/Oct/2024 14:24:33] "[36mGET /static/images/login-bg.jpg HTTP/1.1[0m" 304 -
+2024-10-23 14:24:33,204 - INFO - 127.0.0.1 - - [23/Oct/2024 14:24:33] "[36mGET /static/images/Auxilo-logo.svg HTTP/1.1[0m" 304 -
+2024-10-23 14:24:37,214 - INFO - 127.0.0.1 - - [23/Oct/2024 14:24:37] "POST /send-otp HTTP/1.1" 200 -
+2024-10-23 14:24:57,149 - INFO - 127.0.0.1 - - [23/Oct/2024 14:24:57] "POST /verify-otp HTTP/1.1" 200 -
+2024-10-23 14:24:57,174 - INFO - User Mihir Tendulkar (ID: None) accessed the source name page.
+2024-10-23 14:24:57,232 - INFO - 127.0.0.1 - - [23/Oct/2024 14:24:57] "GET /cxm/source_name HTTP/1.1" 200 -
+2024-10-23 14:24:57,276 - INFO - 127.0.0.1 - - [23/Oct/2024 14:24:57] "[36mGET /static/images/cp.png HTTP/1.1[0m" 304 -
+2024-10-23 14:24:57,277 - INFO - 127.0.0.1 - - [23/Oct/2024 14:24:57] "[36mGET /static/images/website.jpg HTTP/1.1[0m" 304 -
+2024-10-23 14:24:57,305 - INFO - 127.0.0.1 - - [23/Oct/2024 14:24:57] "[36mGET /static/images/login.jpg HTTP/1.1[0m" 304 -
+2024-10-23 14:25:00,536 - INFO - User Mihir Tendulkar (ID: None) accessed the website page.
+2024-10-23 14:25:00,644 - INFO - 127.0.0.1 - - [23/Oct/2024 14:25:00] "GET /cxm/Login HTTP/1.1" 200 -
+2024-10-23 14:25:00,689 - INFO - 127.0.0.1 - - [23/Oct/2024 14:25:00] "GET /static/images/ces_new.jpg HTTP/1.1" 200 -
+2024-10-23 14:25:00,691 - INFO - 127.0.0.1 - - [23/Oct/2024 14:25:00] "GET /static/images/csat_new.jpg HTTP/1.1" 200 -
+2024-10-23 14:25:05,463 - INFO - User Mihir Tendulkar (ID: None) accessed the Csat(Login) page.
+2024-10-23 14:25:05,538 - INFO - 127.0.0.1 - - [23/Oct/2024 14:25:05] "GET /cxm/login_csat HTTP/1.1" 200 -
+2024-10-23 14:25:06,044 - INFO - 127.0.0.1 - - [23/Oct/2024 14:25:06] "GET /api/login/csat/overall HTTP/1.1" 200 -
+2024-10-23 14:25:06,049 - INFO - 127.0.0.1 - - [23/Oct/2024 14:25:06] "GET /api/login/csatcity HTTP/1.1" 200 -
+2024-10-23 14:25:06,978 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-23 14:25:07,447 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-23 14:25:07,842 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-23 14:25:08,823 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-23 14:25:09,210 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-23 14:25:09,724 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-23 14:25:10,278 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-23 14:25:10,834 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-10-23 14:25:10,835 - INFO - 127.0.0.1 - - [23/Oct/2024 14:25:10] "GET /api/login/csat/classifications HTTP/1.1" 200 -
+2024-11-28 13:59:51,744 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.104.25:5000
+2024-11-28 13:59:51,744 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-28 13:59:59,122 - INFO - 127.0.0.1 - - [28/Nov/2024 13:59:59] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-28 14:00:00,074 - INFO - 127.0.0.1 - - [28/Nov/2024 14:00:00] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-28 14:00:00,108 - INFO - 127.0.0.1 - - [28/Nov/2024 14:00:00] "GET /cxm/ HTTP/1.1" 200 -
+2024-11-28 14:00:00,299 - INFO - 127.0.0.1 - - [28/Nov/2024 14:00:00] "GET /static/images/Auxilo-logo.svg HTTP/1.1" 200 -
+2024-11-28 14:00:00,300 - INFO - 127.0.0.1 - - [28/Nov/2024 14:00:00] "GET /static/images/login-bg.jpg HTTP/1.1" 200 -
+2024-11-28 14:00:00,300 - INFO - 127.0.0.1 - - [28/Nov/2024 14:00:00] "GET /static/css/login.css HTTP/1.1" 200 -
+2024-11-28 14:00:11,415 - INFO - 127.0.0.1 - - [28/Nov/2024 14:00:11] "[35m[1mPOST /send-otp HTTP/1.1[0m" 500 -
+2024-11-28 14:00:33,099 - INFO - 127.0.0.1 - - [28/Nov/2024 14:00:33] "[35m[1mPOST /send-otp HTTP/1.1[0m" 500 -
+2024-11-28 14:00:45,689 - INFO - 127.0.0.1 - - [28/Nov/2024 14:00:45] "GET /cxm/ HTTP/1.1" 200 -
+2024-11-28 14:00:45,730 - INFO - 127.0.0.1 - - [28/Nov/2024 14:00:45] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2024-11-28 14:00:45,730 - INFO - 127.0.0.1 - - [28/Nov/2024 14:00:45] "[36mGET /static/images/login-bg.jpg HTTP/1.1[0m" 304 -
+2024-11-28 14:00:45,732 - INFO - 127.0.0.1 - - [28/Nov/2024 14:00:45] "[36mGET /static/images/Auxilo-logo.svg HTTP/1.1[0m" 304 -
+2024-11-28 14:01:04,831 - INFO - 127.0.0.1 - - [28/Nov/2024 14:01:04] "[35m[1mPOST /send-otp HTTP/1.1[0m" 500 -
+2024-11-28 14:02:03,413 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.104.25:5000
+2024-11-28 14:02:03,413 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-28 14:02:03,463 - INFO -  * Restarting with watchdog (windowsapi)
+2024-11-28 14:02:07,904 - WARNING -  * Debugger is active!
+2024-11-28 14:02:07,914 - INFO -  * Debugger PIN: 133-037-400
+2024-11-28 14:02:10,720 - INFO - 127.0.0.1 - - [28/Nov/2024 14:02:10] "[32mGET / HTTP/1.1[0m" 302 -
+2024-11-28 14:02:10,740 - INFO - 127.0.0.1 - - [28/Nov/2024 14:02:10] "GET /cxm/ HTTP/1.1" 200 -
+2024-11-28 14:02:10,906 - INFO - 127.0.0.1 - - [28/Nov/2024 14:02:10] "[36mGET /static/images/Auxilo-logo.svg HTTP/1.1[0m" 304 -
+2024-11-28 14:02:10,907 - INFO - 127.0.0.1 - - [28/Nov/2024 14:02:10] "[36mGET /static/images/login-bg.jpg HTTP/1.1[0m" 304 -
+2024-11-28 14:02:10,907 - INFO - 127.0.0.1 - - [28/Nov/2024 14:02:10] "[36mGET /static/css/login.css HTTP/1.1[0m" 304 -
+2024-11-28 14:02:38,007 - INFO - 127.0.0.1 - - [28/Nov/2024 14:02:38] "[35m[1mPOST /send-otp HTTP/1.1[0m" 500 -
+2024-11-28 14:02:59,462 - INFO - 127.0.0.1 - - [28/Nov/2024 14:02:59] "[35m[1mPOST /send-otp HTTP/1.1[0m" 500 -
+2024-12-10 16:58:56,053 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.104.20:5000
+2024-12-10 16:58:56,054 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-10 16:58:56,211 - INFO -  * Restarting with watchdog (windowsapi)
+2024-12-10 16:59:06,282 - WARNING -  * Debugger is active!
+2024-12-10 16:59:06,294 - INFO -  * Debugger PIN: 133-037-400
+2024-12-10 16:59:06,342 - INFO - 127.0.0.1 - - [10/Dec/2024 16:59:06] "[33mGET /dashboard HTTP/1.1[0m" 404 -
+2024-12-10 16:59:06,941 - INFO - 127.0.0.1 - - [10/Dec/2024 16:59:06] "[32mGET / HTTP/1.1[0m" 302 -
+2024-12-10 16:59:06,986 - INFO - 127.0.0.1 - - [10/Dec/2024 16:59:06] "GET /cxm/ HTTP/1.1" 200 -
+2024-12-10 16:59:07,400 - INFO - 127.0.0.1 - - [10/Dec/2024 16:59:07] "GET /static/images/login-bg.jpg HTTP/1.1" 200 -
+2024-12-10 16:59:07,425 - INFO - 127.0.0.1 - - [10/Dec/2024 16:59:07] "GET /static/images/Auxilo-logo.svg HTTP/1.1" 200 -
+2024-12-10 16:59:07,425 - INFO - 127.0.0.1 - - [10/Dec/2024 16:59:07] "GET /static/css/login.css HTTP/1.1" 200 -
+2024-12-10 16:59:12,748 - INFO - 127.0.0.1 - - [10/Dec/2024 16:59:12] "POST /send-otp HTTP/1.1" 200 -
+2024-12-10 16:59:33,046 - INFO - 127.0.0.1 - - [10/Dec/2024 16:59:33] "POST /verify-otp HTTP/1.1" 200 -
+2024-12-10 16:59:33,086 - INFO - User Mihir Tendulkar (ID: None) accessed the source name page.
+2024-12-10 16:59:33,683 - INFO - 127.0.0.1 - - [10/Dec/2024 16:59:33] "GET /cxm/source_name HTTP/1.1" 200 -
+2024-12-10 16:59:33,750 - INFO - 127.0.0.1 - - [10/Dec/2024 16:59:33] "GET /static/images/cp.png HTTP/1.1" 200 -
+2024-12-10 16:59:33,770 - INFO - 127.0.0.1 - - [10/Dec/2024 16:59:33] "GET /static/images/website.jpg HTTP/1.1" 200 -
+2024-12-10 16:59:33,775 - INFO - 127.0.0.1 - - [10/Dec/2024 16:59:33] "GET /static/images/login.jpg HTTP/1.1" 200 -
+2025-01-14 18:31:05,037 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.23:5000
+2025-01-14 18:31:05,037 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-14 18:31:05,058 - INFO -  * Restarting with watchdog (windowsapi)
+2025-01-14 18:31:28,468 - WARNING -  * Debugger is active!
+2025-01-14 18:31:28,483 - INFO -  * Debugger PIN: 133-037-400
+2025-01-14 18:31:28,536 - INFO - 127.0.0.1 - - [14/Jan/2025 18:31:28] "[33mGET /dashboard HTTP/1.1[0m" 404 -
+2025-01-14 18:31:28,566 - INFO - 127.0.0.1 - - [14/Jan/2025 18:31:28] "[33mGET /dashboard HTTP/1.1[0m" 404 -
+2025-01-14 18:31:28,860 - INFO - 127.0.0.1 - - [14/Jan/2025 18:31:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-14 18:31:42,020 - INFO - 127.0.0.1 - - [14/Jan/2025 18:31:42] "[32mGET /cxm HTTP/1.1[0m" 308 -
+2025-01-14 18:31:42,044 - INFO - 127.0.0.1 - - [14/Jan/2025 18:31:42] "GET /cxm/ HTTP/1.1" 200 -
+2025-01-14 18:31:42,246 - INFO - 127.0.0.1 - - [14/Jan/2025 18:31:42] "GET /static/css/login.css HTTP/1.1" 200 -
+2025-01-14 18:31:42,263 - INFO - 127.0.0.1 - - [14/Jan/2025 18:31:42] "GET /static/images/Auxilo-logo.svg HTTP/1.1" 200 -
+2025-01-14 18:31:42,264 - INFO - 127.0.0.1 - - [14/Jan/2025 18:31:42] "GET /static/images/login-bg.jpg HTTP/1.1" 200 -
+2025-01-14 18:31:46,823 - INFO - 127.0.0.1 - - [14/Jan/2025 18:31:46] "POST /send-otp HTTP/1.1" 200 -
+2025-01-14 18:32:04,073 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:04] "POST /verify-otp HTTP/1.1" 200 -
+2025-01-14 18:32:04,099 - INFO - User Mihir Tendulkar (ID: None) accessed the source name page.
+2025-01-14 18:32:04,192 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:04] "GET /cxm/source_name HTTP/1.1" 200 -
+2025-01-14 18:32:04,258 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:04] "GET /static/images/cp.png HTTP/1.1" 200 -
+2025-01-14 18:32:04,262 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:04] "GET /static/images/website.jpg HTTP/1.1" 200 -
+2025-01-14 18:32:04,272 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:04] "GET /static/images/login.jpg HTTP/1.1" 200 -
+2025-01-14 18:32:09,527 - INFO - User Mihir Tendulkar (ID: None) accessed the customer portal.
+2025-01-14 18:32:09,587 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:09] "GET /cxm/customer_portal HTTP/1.1" 200 -
+2025-01-14 18:32:09,666 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:09] "GET /static/images/csat_new.jpg HTTP/1.1" 200 -
+2025-01-14 18:32:09,702 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:09] "GET /static/images/nps_new.jpg HTTP/1.1" 200 -
+2025-01-14 18:32:12,417 - INFO - User Mihir Tendulkar (ID: None) accessed the CSAT page.
+2025-01-14 18:32:12,482 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:12] "GET /cxm/csat HTTP/1.1" 200 -
+2025-01-14 18:32:12,792 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:12] "GET /api/survey/overall_csat?question_id=1 HTTP/1.1" 200 -
+2025-01-14 18:32:19,994 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:19] "GET /api/survey/csatbranch HTTP/1.1" 200 -
+2025-01-14 18:32:21,251 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:32:21,665 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:32:22,077 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:32:22,499 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:32:22,920 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:32:23,404 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:32:23,816 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:32:24,250 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:32:24,979 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:32:25,444 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:32:25,909 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:32:26,398 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:32:26,852 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:32:27,376 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:32:27,831 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:32:28,282 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:32:28,740 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:32:29,236 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:32:29,668 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:32:29,670 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:29] "GET /api/survey/csat/classifications HTTP/1.1" 200 -
+2025-01-14 18:32:43,595 - INFO - User Mihir Tendulkar (ID: None) accessed the website page.
+2025-01-14 18:32:43,803 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:43] "GET /cxm/website HTTP/1.1" 200 -
+2025-01-14 18:32:43,871 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:43] "[36mGET /static/images/csat_new.jpg HTTP/1.1[0m" 304 -
+2025-01-14 18:32:43,874 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:43] "GET /static/images/ces_new.jpg HTTP/1.1" 200 -
+2025-01-14 18:32:46,337 - INFO - User Mihir Tendulkar (ID: None) accessed the website CSAT page.
+2025-01-14 18:32:46,530 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:46] "GET /cxm/website_csat HTTP/1.1" 200 -
+2025-01-14 18:32:46,798 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:46] "GET /api/website/csatcity HTTP/1.1" 200 -
+2025-01-14 18:32:46,803 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:46] "GET /api/website/csat/overall HTTP/1.1" 200 -
+2025-01-14 18:32:58,943 - INFO - User Mihir Tendulkar (ID: None) accessed the website page.
+2025-01-14 18:32:59,064 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:59] "GET /cxm/Login HTTP/1.1" 200 -
+2025-01-14 18:32:59,119 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:59] "[36mGET /static/images/csat_new.jpg HTTP/1.1[0m" 304 -
+2025-01-14 18:32:59,130 - INFO - 127.0.0.1 - - [14/Jan/2025 18:32:59] "[36mGET /static/images/ces_new.jpg HTTP/1.1[0m" 304 -
+2025-01-14 18:33:01,388 - INFO - User Mihir Tendulkar (ID: None) accessed the Csat(Login) page.
+2025-01-14 18:33:01,732 - INFO - 127.0.0.1 - - [14/Jan/2025 18:33:01] "GET /cxm/login_csat HTTP/1.1" 200 -
+2025-01-14 18:33:02,272 - INFO - 127.0.0.1 - - [14/Jan/2025 18:33:02] "GET /api/login/csat/overall HTTP/1.1" 200 -
+2025-01-14 18:33:02,291 - INFO - 127.0.0.1 - - [14/Jan/2025 18:33:02] "GET /api/login/csatbranch HTTP/1.1" 200 -
+2025-01-14 18:33:02,784 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:33:03,258 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:33:03,692 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:33:04,495 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:33:04,994 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:33:05,448 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:33:05,851 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:33:08,098 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-14 18:33:08,105 - INFO - 127.0.0.1 - - [14/Jan/2025 18:33:08] "GET /api/login/csat/classifications HTTP/1.1" 200 -

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #eef1ef;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .otp-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .otp-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="otp-container">
+        <h2 class="otp-title">Enter OTP</h2>
+        <form id="otpForm">
+            <div class="form-group">
+                <label for="otp">OTP Code</label>
+                <input type="text" class="form-control" id="otp" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('otpForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const otp = document.getElementById('otp').value;
+            const urlParams = new URLSearchParams(window.location.search);
+            const email = urlParams.get('email');
+
+            console.log('URL Parameters:', urlParams.toString()); // Debugging line
+            console.log('Email parameter:', email); // Debugging line
+
+            if (!email) {
+                alert('Email parameter is missing.');
+                return;
+            }
+
+            // Send OTP for validation
+            fetch('/verify-otp', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email: email, otp: otp })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.valid) {
+                    window.location.href = '/cxm/source_name'; // Redirect to the Source_Name
+                } else {
+                    alert('Invalid OTP. Please try again.');
+                    window.location.href = '/'; // Redirect to the index page
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again later.');
+            });
+        });
+    </script>
+</body>
+</html>

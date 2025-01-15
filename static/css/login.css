@@ -1,0 +1,249 @@
+/* Fonts */
+:root {
+  --background-color: #ffffff;
+    --default-font: "Poppins", sans-serif;
+    --default-color: #333333;
+    --orange-color: #F37225;
+    --blue-color: #142C6B;
+    --white-color: #ffffff;
+}
+
+body {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    font-family: var(--default-font);
+}
+
+/*--------------------------------------------------------------
+# Global Sections
+--------------------------------------------------------------*/
+section,
+.section {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    padding: 60px 0;
+    scroll-margin-top: 98px;
+    overflow: clip;
+}
+
+@media (max-width: 1199px) {
+
+    section,
+    .section {
+        scroll-margin-top: 64px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+
+.hero .container {
+    position: relative;
+    z-index: 3;
+}
+
+.hero .logo {
+  display: block;
+  position: relative;
+  width: 155px;
+  max-width: 155px;
+  margin-bottom: 24px;
+}
+
+.hero .logo img {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.hero span {
+    color: var(--orange-color);
+}
+
+.hero div h2:nth-of-type(2) span{
+    color: var(--blue-color);
+}
+
+.hero .log-in-form,
+.hero .otp-form {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 0px;
+    border-radius: 7px;
+    background: color-mix(in srgb, var(--default-color) 5%, white 90%);
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
+    
+}
+
+.hero .log-in-form input[type=email],
+.hero .otp-form input[type=text] {
+    background-color: transparent;
+    border: 0;
+    padding: 4px 10px;
+    width: 100%;
+}
+
+.hero .log-in-form input[type=email]:focus-visible,
+.hero .log-in-form .form-control:focus,
+.hero .otp-form input[type=email]:focus-visible,
+.hero .otp-form .form-control:focus  {
+    outline: none;
+    box-shadow: none;
+}
+
+.hero .log-in-form .form-control:focus~label,
+.hero .log-in-form .form-control:not(:placeholder-shown)~label,
+.hero .log-in-form .form-select~label,
+.hero .otp-form .form-control:focus~label,
+.hero .otp-form .form-control:not(:placeholder-shown)~label,
+.hero .otp-form .form-select~label  {
+    opacity: .65;
+    transform: scale(.85) translateY(-.9rem) translateX(.0rem);
+    font-size: 0.85rem;
+}
+
+.hero .log-in-btn,
+.hero .otp-btn {
+  text-align: right;
+}
+
+.hero .log-in-btn input[type=submit],
+.hero .otp-btn input[type=submit] {
+    border: 0;
+    box-shadow: none;
+    background-color: var(--orange-color);
+    border-color: var(--orange-color);
+    padding: 8px 30px 10px 30px;
+    border-radius: 4px;
+    color: var(--white-color);
+    transition: 0.3s;
+}
+
+.hero .log-in-btn input[type=submit]:hover,
+.hero .otp-btn input[type=submit]:hover {
+    background-color: color-mix(in srgb, var(--orange-color), transparent 10%);
+}
+
+.hero .log-in-form span.placeholder,
+.hero .otp-form span.placeholder {
+  position: absolute;
+  margin: 10px 0;
+  padding: 0 4px;
+  font-family: var(--default-font);
+  color:  #6c757d;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  top: 0;
+  left: 17px;
+  transition: all 0.2s;
+  transform-origin: 0% 0%;
+  background: none;
+  pointer-events: none;
+}
+
+.hero .log-in-form input:focus + span.placeholder,
+.hero .log-in-form input-block input:valid + span.placeholder {
+  transform: scale(0.8) translateY(-30px);
+  background: none;
+}
+
+
+.otp-form-container
+{
+  display: none;
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+}
+
+/* Log in Form Messages
+------------------------------*/
+.login-form-container .error-message,
+.otp-form-container .error-message {
+  display: none;
+  background: var(--orange-color);
+  color: var(--white-color);
+  text-align: left;
+  padding: 4px 6px;
+  margin-top: 24px;
+  font-weight: 400;
+  font-size: 0.55rem;
+}
+
+.login-form-container .loading,
+ .otp-form-container .loading {
+  display: none;
+  background: var(--surface-color);
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+}
+
+.login-form-container .loading:before,
+.otp-form-container .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid var(--orange-color);
+  border-top-color: var(--blue-color);
+  animation: login-form-loading 1s linear infinite;
+}
+
+@keyframes login-form-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+#otp-form
+{
+  display: none;
+}
+
+
+
+

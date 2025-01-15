@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSAT Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <style>
+        body {
+            /* background-color: #eef1ef; */
+            color: #222222;
+            font-family: "Poppins", sans-serif;
+            background-image: url('https://www.auxilo.com/assets/images/home/banner-bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+.container {
+    padding: 0 15px;
+}
+
+.card {
+    margin: 15px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-body {
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Navbar styles */
+/* Navbar styles */
+.navbar {
+            /* background-color: #eef1ef; */
+            color: #000000;
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+        }
+
+        /* Brand link styles */
+        .navbar-brand {
+            color: #000000;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        /* Logo styling */
+        .navbar-brand img {
+            height: 60px;
+            /* Adjust height as needed */
+            width: auto;
+            /* Maintain aspect ratio */
+        }
+
+        .nav-link.dropdown-toggle {
+            color: #000000 !important;
+            /* Ensure the username appears in black */
+        }
+
+        .navbar-dark .navbar-nav .show>.nav-link {
+            color: #000000;
+        }
+
+        /* Profile dropdown styling */
+        .profile-dropdown {
+            cursor: pointer;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 32px;
+        }
+
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.chart-container {
+    height: 464px;
+}
+
+.zc-ref {
+    display: none;
+}
+
+.loading {
+    text-align: center;
+    color: #999;
+    font-size: 1.2rem;
+}
+
+.progress-bar {
+    height: 5px;
+    background-color: #007bff;
+    transition: width 1s ease-in-out;
+    
+}
+
+.list-group-item {
+    border: none;
+    padding: 0.5rem 1rem;
+}
+
+.list-group-item:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.list-group-item:nth-child(odd) {
+    background-color: #fff;
+}
+
+.card.csat-card {
+    background-color: #e3f2fd; /* Light blue */
+    color: #333;
+}
+
+.card.nps-card {
+    background-color: #ffe0b2; /* Light orange */
+    color: #333;
+}
+
+.card.detractor-details-card {
+    background-color: #ffcccb; /* Light red */
+    color: #333;
+}
+
+.card.passive-details-card {
+    background-color: #fff9c4; /* Light yellow */
+    color: #333;
+}
+
+.card.promoter-details-card {
+    background-color: #c8e6c9; /* Light green */
+    color: #333;
+}
+
+.progress {
+    height: 30px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 2px solid #009933; /* Border color for the overall progress bar */
+    border-radius: 4px; /* Optional: Rounded corners for the overall progress bar */
+}
+
+.progress-bar {
+    height: 100%;
+    line-height: 30px; /* Vertically center text in the bar */
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    background-color: #28a745;
+    transition: width 0.6s ease;
+    border: 2px solid #009933; /* Change the color to your preference */
+    border-radius: 4px;
+}
+
+.progress-bar-success {
+    background-color: #007bff;
+}
+
+.progress-bar-warning {
+    background-color: #ffc107;
+}
+
+.progress-bar-danger {
+    background-color: #dc3545;
+}
+
+.card-body p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.card-body p strong {
+    margin-right: 0.5rem; /* Adjust spacing between label and value */
+}
+
+.card-body p span {
+    font-weight: bold;
+}
+
+.list-group-item {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    margin-bottom: -1px; /* Remove bottom margin for the last item */
+}
+
+/* Style for the accordion container */
+.accordion {
+    margin: 20px 0;
+}
+
+/* Style for the accordion headers */
+.accordion-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style for the accordion buttons */
+.accordion-button {
+    color: #333;
+    background-color: #f8f9fa;
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    padding: 15px;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Style for the accordion buttons on hover */
+.accordion-button:hover {
+    background-color: #e9ecef;
+}
+
+/* Style for the accordion body */
+.accordion-body {
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-top: none; /* Remove top border */
+}
+
+/* Active accordion button */
+.accordion-button:not(.collapsed) {
+    color: #495057;
+    background-color: #e9ecef;
+}
+/* Accordion item color styles */
+.accordion-item.positive-comments {
+    border-left: 5px solid green;
+}
+
+.accordion-item.positive-comments .accordion-button {
+    background-color: #e0f7e0; /* Light green background for positive comments */
+    color: green; /* Green text for positive comments */
+}
+
+.accordion-item.negative-comments {
+    border-left: 5px solid red;
+}
+
+.accordion-item.negative-comments .accordion-button {
+    background-color: #f8d7da; /* Light red background for negative comments */
+    color: red; /* Red text for negative comments */
+}
+
+.accordion-item.suggestions-comments {
+    border-left: 5px solid rgb(81, 66, 216);
+}
+
+.accordion-item.suggestions-comments .accordion-button {
+    background-color: #fff3cd; /* Light yellow background for suggestions */
+    color: #4252df; /* Yellow text for suggestions */
+}
+.dashboard-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align the heading and date */
+        }
+.dashboard-header h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 2rem; /* Adjust size as needed */
+        }
+.dashboard-header p {
+    margin: 0; /* Remove default margin */
+    font-size: 1.5rem; /* Slightly smaller size than the heading */
+    color: #555; /* Optional: Add color for distinction */
+        }
+        .csat-card {
+  position: relative;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.csat-hint {
+  height: 30px;
+  width: 30px;
+  color: white;
+  background-color: rgba(0,0,0,0.85);
+  border-radius: 15px;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  transition: .2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.csat-hint > span {
+  position: absolute;
+  top: 7px;
+  right: 12px;
+}
+
+.csat-hint > p {
+  overflow: hidden;
+  max-height: 0px;
+  transition-delay: 0.2s;
+  color: #fff;
+  padding: 10px;
+}
+
+#csat-hint-click:checked + .csat-hint {
+  height: calc(100% + 30px);
+  width: calc(100% + 30px);
+}
+
+#csat-hint-click:checked + .csat-hint > p {
+  max-height: 999px;
+}
+/* Ensure the accordion looks good on smaller screens */
+@media (max-width: 768px) {
+    .accordion-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        height: 300px;
+    }
+}
+@media(max-width:576px) {
+            .navbar-brand img {
+                height: 50px;
+                width: auto;
+            }
+
+            .profile-dropdown img {
+                width: 32px;
+                height: 32px;
+            }
+
+            h1 {
+                font-weight: 600;
+                font-size: 24px;
+            }
+
+            .card-img-top {
+                height: 190px;
+            }
+            .card-title {
+                font-size: 1.3rem;
+            }
+            #user_name{
+                font-size: 14px;
+            }
+        }
+.custom-back-button {
+        background-color: #6c757d; /* Bootstrap's secondary color */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .custom-back-button:hover {
+        background-color: #5a6268; /* Darker shade on hover */
+        transform: translateY(-2px); /* Slight lift on hover */
+    }
+
+    .custom-back-button:active {
+        background-color: #545b62; /* Even darker shade on click */
+        transform: translateY(0); /* Reset lift on click */
+    }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container d-flex ">
+            <div><a class="navbar-brand" href="#">
+                <img src="https://www.auxilo.com/assets/images/Auxilo-logo-horizontal.svg" alt="Auxilo Logo">
+                <!-- <img src="{{ url_for('static', filename='images/Auxilo-logo.svg') }}" alt="Auxilo Logo"> -->
+                </a>
+            </div>
+            <div class="">
+                <ul class="navbar-nav">
+                    <!-- Profile dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle profile-dropdown" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <!-- <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Profile" class="rounded-circle" width="60" height="60"> -->
+                            <img src="https://cdn-icons-png.flaticon.com/128/4140/4140047.png" alt="Profile"
+                                class="rounded-circle mr-2" width="40" height="40">
+                            <span id="user_name">{{ user_name }}</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <span class="dropdown-item-text"><span id="user_name_display">{{ user_name }}</span></span>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/cxm/logout">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <div class="text-left">
+            <button id="backButton" class="btn btn-secondary custom-back-button" onclick="history.back()">Back</button>
+        </div>
+        <div class="dashboard-header mb-4 text-center">
+            <h1>CSAT Dashboard</h1>
+            <p id="datetime"></p>
+        </div>
+        <div class="mb-4">
+            <div class="form-row">
+                <div class="col-md-3 mb-2">
+                    <label for="startDate">Start Date:</label>
+                    <input type="date" id="startDate" class="form-control">
+                </div>
+                <div class="col-md-3 mb-2">
+                    <label for="endDate">End Date:</label>
+                    <input type="date" id="endDate" class="form-control">
+                </div>
+                <div class="col-md-3 mb-2">
+                    <label for="location-select">Select Location:</label>
+                    <select id="location-select" class="form-control">
+                        <option value="all">All Locations</option>
+                        <!-- Options will be dynamically populated here -->
+                    </select>
+                </div>
+                <div class="col-md-3 mb-2 d-flex align-items-end">
+                    <button id="applyFilter" class="btn btn-primary">Apply Filter</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Gauge Chart -->
+            <div class="col-12">
+                <div class="card csat-card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">CSAT Percentage</h5>
+                        <div id="csatChart" class="chart-container"></div>
+                        <label for="csat-hint-click">
+                            <input type="checkbox" id="csat-hint-click" style="display: none;">
+                            <div class="csat-hint">
+                                <span class="fa fa-info"></span>
+                                <p>CSAT % = (Number of Positive Responses(4 & 5)/Total number of Responses) x 100.</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+                        
+            <!-- Total CSAT Responses and Positive Responses -->
+            <div class="col-lg-6 col-md-12">
+                <div class="card csat-card same-size">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">CSAT Responses</h5>
+                        <p class="text-center">
+                            <strong>Total Responses: </strong>
+                            <span id="totalCsat">Loading...</span>
+                        </p>
+                        <p class="text-center">
+                            <strong>Total Positive Responses: </strong>
+                            <span id="csatPositiveResponses">Loading...</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- CSAT Positive Responses Progress Bar -->
+            <div class="col-lg-6 col-md-12">
+                <div class="card csat-card same-size">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">CSAT Positive Responses</h5>
+                        <div class="progress">
+                            <div id="positiveProgressBar" class="progress-bar positive" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map for Branches -->
+            <div class="col-12">
+                <div class="card csat-card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">BranchWise Details</h5>
+                        
+                        <!-- Location Dropdown -->
+                        <div class="form-group">
+                            <label for="location-select">Select Location:</label>
+                            <select class="form-control" id="location-select" onchange="updateMap()">
+                                <option value="all">All Locations</option>
+                            </select>
+                        </div>
+                        
+                        <div id="mapChart" class="chart-container"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CSAT Rating Counts Bar Chart -->
+            <div class="col-12">
+                <div class="card csat-card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">CSAT Rating Counts</h5>
+                        <div id="ratingCountsChart" class="chart-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+// Map cities to state codes (if needed)
+const cityMap = {
+    'Hyderabad': 'TL',
+    'Chennai': 'TN',
+    'Bengaluru': 'KA',
+    'Pune': 'MH',
+    'Ahmedabad': 'GJ',
+    'Delhi': 'DL',
+    'Mumbai': 'MH'
+};
+
+// Assign colors to each city
+const colors = {
+    'Hyderabad': '#FF5733',
+    'Chennai': '#33FF57',
+    'Bengaluru': '#3357FF',
+    'Pune': '#FF33A6',
+    'Ahmedabad': '#33FFF6',
+    'Delhi': '#A633FF',
+    'Mumbai': '#FFAF33'
+};
+
+async function fetchDataAndRenderChart() {
+    const response = await fetch(`/api/website/csatcity`);
+    const data = await response.json();
+
+    // Populate dropdown with unique cities
+    const locationSelect = document.getElementById("location-select");
+    const uniqueCities = [...new Set(data.map(city => city.city))];
+    uniqueCities.forEach(city => {
+        const option = document.createElement("option");
+        option.value = city;
+        option.textContent = city;
+        locationSelect.appendChild(option);
+    });
+
+    // Store the data globally to make it accessible in the updateMap function
+    window.cityData = data;
+
+    // Initially render the map with all cities
+    updateMap();
+}
+
+function updateMap() {
+    const selectedLocation = document.getElementById("location-select").value;
+    const data = window.cityData;
+
+    const filteredData = selectedLocation === "all" 
+        ? data 
+        : data.filter(city => city.city === selectedLocation);
+
+    const items = {};
+    filteredData.forEach(city => {
+        const stateCode = cityMap[city.city];
+        if (stateCode) {
+            const color = colors[city.city] || '#00bcd4';
+            items[stateCode] = {
+                tooltip: {
+                    text: `${city.city} has ${city.comments_count} comments`,
+                    backgroundColor: color
+                },
+                backgroundColor: color,
+                label: {
+                    visible: true
+                }
+            };
+        }
+    });
+
+    const mapChartConfig = {
+        shapes: [
+            {
+                type: 'zingchart.maps',
+                options: {
+                    name: 'ind',
+                    panning: false,
+                    zooming: false,
+                    scrolling: false,
+                    style: {
+                        tooltip: {
+                            borderColor: '#000',
+                            borderWidth: '2px',
+                            fontSize: '18px'
+                        },
+                        borderColor: '#000',
+                        borderWidth: '2px',
+                        controls: {
+                            visible: false
+                        },
+                        hoverState: {
+                            alpha: .28
+                        },
+                        items: items,
+                        label: {
+                            fontSize: '15px',
+                            visible: false
+                        }
+                    }
+                }
+            }
+        ]
+    };
+
+    zingchart.loadModules('maps,maps-ind');
+    zingchart.render({
+        id: 'mapChart',
+        data: mapChartConfig
+    });
+}
+
+    
+        async function fetchCsatData(startDate, endDate, city) {
+            try {
+                const url = startDate && endDate && city !== "all"
+                    ? `/api/website/csat/city?city=${city}&start_date=${startDate}&end_date=${endDate}`
+                    : startDate && endDate
+                    ? `/api/website/csat/overall?start_date=${startDate}&end_date=${endDate}`
+                    : `/api/website/csat/overall`;
+    
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                console.log('Fetched Data:', data); // Debugging: log the data
+                return data;
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                return null; // Return null in case of error
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            var today = new Date();
+            var options = { year: 'numeric', month: 'long', day: 'numeric' };
+            var formattedDate = today.toLocaleDateString(undefined, options);
+            document.getElementById('datetime').textContent = formattedDate;
+    
+            // Function to fetch csat data
+            async function fetchCsatData(startDate, endDate, city) {
+                const url = city && city !== "all" && startDate && endDate
+                    ? `/api/website/csat/city?city=${location}&start_date=${startDate}&end_date=${endDate}`
+                    : city && city !== "all"
+                        ? `/api/website/csat/location?city=${city}`
+                        : startDate && endDate
+                            ? `/api/website/csat/overall?start_date=${startDate}&end_date=${endDate}`
+                            : `/api/website/csat/overall`;
+
+                try {
+                    const response = await fetch(url);
+                    const data = await response.json();
+                    const csatPrecentage = data.csat_percentage.toFixed(2);
+                    const totalCsat = data.total_responses;
+                    const csatPositiveResponses = data.csat_positive_responses;
+                    const csatRatingCounts = data.csat_rating_counts;
+    
+                    // Update csat details
+                    document.getElementById('totalCsat').innerText = totalCsat;
+                    document.getElementById('csatPositiveResponses').innerText = csatPositiveResponses;
+    
+                    // Create the ZingChart gauge for csat
+                    var myConfig = {
+                        type: "gauge",
+                        globals: {
+                            fontSize: 25
+                        },
+                        plotarea: {
+                            marginTop: 60
+                        },
+                        plot: {
+                            size: '100%',
+                            valueBox: {
+                                placement: 'center',
+                                text: '%v%',
+                                fontSize: 35,
+                                rules: [{
+                                            rule: '%v >= 70',
+                                            text: '%v%<br>EXCELLENT',
+                                            fontColor: 'black'  // Ensure text remains black
+                                        },
+                                        {
+                                            rule: '%v < 70 && %v >= 50',
+                                            text: '%v%<br>Good',
+                                            fontColor: 'black'  // Ensure text remains black
+                                        },
+                                        {
+                                            rule: '%v < 50 && %v >= 30',
+                                            text: '%v%<br>Fair',
+                                            fontColor: 'black'  // Ensure text remains black
+                                        },
+                                        {
+                                            rule: '%v < 30',
+                                            text: '%v%<br>Bad',
+                                            fontColor: 'black'  // Ensure text remains black
+                                        }]
+                            }
+                        },
+                        scaleR: {
+                            aperture: 180,
+                            minValue: 0,
+                            maxValue: 100,
+                            step: 10,
+                            center: {
+                                visible: false
+                            },
+                            tick: {
+                                visible: false
+                            },
+                            item: {
+                                offsetR: 0
+                            },
+                            labels: ['0', '10', '20', '30', '40', '50', '60', '70', '80', '90', '100'],
+                            ring: {
+                                size: 50,
+                                rules: [{
+                                            rule: '%v < 30',
+                                            backgroundColor: '#E53935'
+                                        },
+                                        {
+                                            rule: '%v >= 30 && %v < 50',
+                                            backgroundColor: '#FFA726'
+                                        },
+                                        {
+                                            rule: '%v >= 50 && %v < 70',
+                                            backgroundColor: '#FFD700'
+                                        },
+                                        {
+                                            rule: '%v >= 70',
+                                            backgroundColor: '#66BB6A'
+                                        }]
+                            }
+                        },
+                        series: [{
+                            values: [parseFloat(csatPrecentage)], // Use formatted percentage
+                            backgroundColor: 'black',
+                            indicator: [10, 10, 10, 10, 0.75],
+                            animation: {
+                                effect: 2,
+                                method: 1,
+                                sequence: 4,
+                                speed: 900
+                            }
+                        }]
+                    };
+    
+                    zingchart.render({
+                        id: 'csatChart',
+                        data: myConfig,
+                        height: '100%',
+                        width: '100%'
+                    });
+                    // Create the ZingChart bar chart for CSAT rating counts
+                    var barChartConfig = {
+                            type: 'bar',
+                            globals: {
+                                fontSize: 14
+                            },
+                            plot: {
+                                fillType: 'none',
+                                hoverstate: {
+                                    visible: false,
+                                },
+                                barsOverlap: true,
+                                barWidth: '50%',
+                                animation: {
+                                    effect: 2,
+                                    method: 1,
+                                    sequence: 4,
+                                    speed: 900
+                                },
+                                styles: ["red", "orange", "yellow", "blue", "green"],
+                            },
+                            scaleX: {
+                                values: ['1', '2', '3', '4', '5'],
+                                labels: ['1 😡', '2 😠', '3 😐', '4 😊', '5 😃']
+                            },
+                            scaleY: {
+                                label: {
+                                    text: 'Number of Responses'
+                                }
+                            },
+                            series: [{
+                                values: [
+                                    data.csat_rating_counts[1],
+                                    data.csat_rating_counts[2],
+                                    data.csat_rating_counts[3],
+                                    data.csat_rating_counts[4],
+                                    data.csat_rating_counts[5]
+                                ],
+                                borderColor: 'transparent',
+                                borderWidth: 0
+                            }]
+                        };
+
+                        zingchart.render({
+                            id: 'ratingCountsChart',
+                            data: barChartConfig,
+                            height: '100%',
+                            width: '100%'
+                        });
+                        // Update the positive responses progress bar
+                        const positivePercentage = (csatPositiveResponses / totalCsat) * 100;
+                        const progressBar = document.getElementById('positiveProgressBar');
+                        progressBar.style.width = `${positivePercentage}%`;
+                        progressBar.setAttribute('aria-valuenow', positivePercentage);
+                        progressBar.textContent = `${Math.round(positivePercentage)}%`;
+                    
+                    // updateChart(data); // Update the donut chart with new data
+                    updateMap(); // Update the map with new data
+                } catch (error) {
+                    console.error("Error fetching CSAT data:", error);
+                }
+            }
+    
+            document.getElementById("applyFilter").addEventListener("click", function () {
+                const startDate = document.getElementById("startDate").value;
+                const endDate = document.getElementById("endDate").value;
+                const city = document.getElementById("location-select").value;
+    
+                fetchCsatData(startDate, endDate, city);
+            });
+    
+            // Update the map when the branch dropdown changes
+            document.getElementById("location-select").addEventListener("change", function () {
+                const selectedLocation = this.value;
+                const startDate = document.getElementById("startDate").value;
+                const endDate = document.getElementById("endDate").value;
+    
+                fetchCsatData(startDate, endDate, selectedLocation);
+            });
+    
+            fetchCsatData(); // Initial data fetch and render
+            fetchDataAndRenderChart();
+        });
+
+    </script>
+    
+      
+</body>
+</html>
